@@ -1,0 +1,161 @@
+/*
+ * Portfolio website styles.
+ *
+ * Light background with dark blue typography and accents.
+ * Includes fade-in and fade-out animations for smooth page transitions.
+ */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #031d45;
+}
+
+/* Header */
+header {
+  background-color: #041f53;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo area with image and name */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Navigation */
+nav {
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a.current {
+  background-color: #00a3e0;
+  color: #ffffff;
+}
+
+/* Main content */
+main {
+  padding: 40px 20px;
+}
+
+main section {
+  margin-bottom: 40px;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #041f53;
+}
+
+main h3 {
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #031d45;
+}
+
+main ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+main ul li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #041f53;
+  color: #6f80a7;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Fade animations */
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav li {
+    margin: 5px 0;
+  }
+}
